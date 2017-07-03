@@ -194,10 +194,13 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 5px;
+  border-width: medium;
 }
 td,
 th {
   padding: 3px;
+  border-width: medium;
+  border-color: black;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -257,7 +260,7 @@ th {
     border-top-color: #000 !important;
   }
   .label {
-    border: 1px solid #000;
+    border: 1px solid black;
   }
   .table {
     border-collapse: collapse !important;
@@ -1494,7 +1497,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 5px solid #dddddd;
 }
 .table .table {
   background-color: #ffffff;
@@ -1516,7 +1519,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 5px solid #dddddd;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {

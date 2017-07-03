@@ -1,13 +1,11 @@
 import React from 'react'
-import btcgraph from './images/btcgraph.svg'
-import btcgraph2 from './images/btcgraph2.svg'
+
 
 function Balances(props) {
   return (
-    <div className="container">
-    <div className="col-md-6">
+<div>
 <h2>Account Balances</h2>
-<table class="table table-bordered">
+<table className="table table-bordered">
   <thead>
     <tr>
       <th>Currency</th>
@@ -33,7 +31,7 @@ function Balances(props) {
 </table>
 </div>
 
-    </div>
+
 
   )
 

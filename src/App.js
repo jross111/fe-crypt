@@ -7,7 +7,9 @@ class App extends Component {
     return (
       <div className="container">
       <NavBar />
+      <div className="col-md-3" style={{color: "black"}}>
       <Balances />
+      </div>
 
       </div>
     );
