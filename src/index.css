@@ -2324,7 +2324,11 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary {
   color: #ffffff;
   background-color: #337ab7;
-  border-color: #2e6da4;
+  border-color: #423737;
+
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-bottom: 10px;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -2552,7 +2556,11 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger {
   color: #ffffff;
   background-color: #d9534f;
-  border-color: #d43f3a;
+  border-color: black;
+  border-style:groove;
+  padding-left: 28px;
+  padding-right: 30px;
+  padding-bottom: 10px;
 }
 .btn-danger:focus,
 .btn-danger.focus {
