@@ -5,7 +5,7 @@ import Balances from './components/Balances.js'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
       <NavBar />
       <Balances />
 
