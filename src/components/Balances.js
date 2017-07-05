@@ -1,7 +1,7 @@
 import React from 'react'
 import fetch from 'isomorphic-fetch'
 
-function Balances(props) {
+function Balances () {
 
 
 

@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-function Trade(props){
+function Sell(props){
   return(
     <div className="container">
       <div className="row">
         <div className="col">
-          <h3>Buy Bitcoin With USD</h3>
+          <h3>Sell Bitcoin For USD</h3>
         </div>
         <div className="col-md-3">
         <div className="btn-group" role="group" >
@@ -24,4 +24,4 @@ function Trade(props){
 }
 
 
-export default Trade
+export default Sell
