@@ -1,7 +1,13 @@
 import React from 'react'
-
+import fetch from 'isomorphic-fetch'
 
 function Balances(props) {
+
+
+
+  let usd = 10000.00
+  let btc_balance = 0
+  let eth_balance = 0
   return (
 <div>
 <h2>Account Balances</h2>
@@ -15,17 +21,17 @@ function Balances(props) {
   <tbody>
     <tr>
       <td>USD</td>
-      <td>$10000.00</td>
+      <td>{usd}</td>
     </tr>
     <tr>
       <td>BTC</td>
 
-      <td>0.00</td>
+      <td>{btc_balance}</td>
     </tr>
     <tr>
       <td>ETH</td>
 
-      <td>0.00</td>
+      <td>{eth_balance}</td>
     </tr>
   </tbody>
 </table>
