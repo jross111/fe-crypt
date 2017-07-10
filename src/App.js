@@ -14,7 +14,8 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      current_price: ""
+      current_price: "",
+        usd_balance: 5000
     }
   }
 
@@ -34,7 +35,7 @@ class App extends Component {
           <Sell />
           </div>
           <div className="col-md-3">
-            <Balances />
+            <Balances usd_balance={this.state.usd_balance}/>
           </div>
         </div>
         <BitcoinGraph   />

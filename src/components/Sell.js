@@ -1,4 +1,5 @@
 import React from 'react'
+import BitcoinPrice from './BitcoinPrice.js'
 
 
 function Sell(props){
@@ -16,6 +17,7 @@ function Sell(props){
           <button type="button" className="btn  btn-primary">1/4</button>
           <button type="button" className="btn  btn-primary">1/2</button>  <button type="button" className="btn  btn-danger">Max</button>
         </div>
+              <input type="submit" value="Sell" className="btn btn-block btn-lg btn-success"/>
         </div>
         </div>
       </div>
