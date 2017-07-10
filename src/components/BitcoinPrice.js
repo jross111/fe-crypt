@@ -3,12 +3,30 @@ import React from 'react'
 
 function BitcoinPrice(props) {
     return (
-      <div>
-        <h3> 1 Bitcoin = ${props.current_price}</h3>
-        <h3> 0.25 Bitcoin = ${props.current_price * 0.25}</h3>
-        <h3> $10,000 =  { 10000 / props.current_price} Bitcoin</h3>
-        <h3> $1 =  { 1/ props.current_price} Bitcoin</h3>
-      </div>
+      <table className="table table-bordered">
+      	<thead>
+      		<th>Currency Unit</th>
+      		<th> Value </th>
+      	</thead>
+      	<tbody>
+      		<tr>
+      			<td> 1 BTC </td>
+      			<td> ${props.current_price}</td>
+      		</tr>
+      		<tr>
+      			<td> 0.25 BTC </td>
+      			<td> ${props.current_price * 0.25}</td>
+      		</tr>
+      		<tr>
+      			<td>$10,000</td>
+      			<td> BTC { 10000 / props.current_price} </td>
+      		</tr>
+      		<tr>
+      			<td>$1 </td>
+      			<td> BTC { 1 / props.current_price}</td>
+      		</tr>
+      	</tbody>
+      </table>
 
     )
 

@@ -15,7 +15,7 @@ class App extends Component {
     super()
     this.state = {
       current_price: "",
-        usd_balance: 5000
+
     }
   }
 
