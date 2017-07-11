@@ -6,6 +6,8 @@ import Trade from './components/Trade.js'
 import Sell from './components/Sell.js'
 import BitcoinGraph from './components/BitcoinGraph.js'
 import BitcoinPrice from './components/BitcoinPrice.js'
+import USDBalance from './components/USDBalance.js'
+
 
 
 
@@ -17,7 +19,7 @@ class App extends Component {
       current_price: "",
 
     }
-  }
+  } 
 
   componentWillMount() {
     fetch('https://blockchain.info/q/24hrprice')
@@ -28,17 +30,23 @@ class App extends Component {
     return (
       <div className="container">
         <NavBar />
+
         <div className="row">
-          <div className="col-md-6">
-          <BitcoinPrice current_price={this.state.current_price}/>
+          <div className="col-md-4">
           <Trade />
+          </div>
+          <div className="col-md-4">
           <Sell />
           </div>
+        <div className="col-md-4">
+          <BitcoinPrice current_price={this.state.current_price}/>
+              </div>
+         
           <div className="col-md-3">
-            <Balances usd_balance={this.state.usd_balance}/>
+          
           </div>
         </div>
-        <BitcoinGraph   />
+        <BitcoinGraph />
       </div>
     );
   }

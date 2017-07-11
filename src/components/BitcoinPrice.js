@@ -4,10 +4,7 @@ import React from 'react'
 function BitcoinPrice(props) {
     return (
       <table className="table table-bordered">
-      	<thead>
-      		<th>Currency Unit</th>
-      		<th> Value </th>
-      	</thead>
+   
       	<tbody>
       		<tr>
       			<td> 1 BTC </td>
@@ -28,7 +25,9 @@ function BitcoinPrice(props) {
       	</tbody>
       </table>
 
+
     )
+
 
 
   }
