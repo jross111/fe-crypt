@@ -25,14 +25,16 @@ class App extends Component {
   handleTradeChange( e ){
     const newValue = e.target.value
     console.log(newValue)
-    const convertedValue =  ( newValue / this.state.current_price )
+    const convertedValue =  (( newValue / this.state.current_price ).toFixed(4))
     this.setState({convertedTradeValue: convertedValue})   
   }
 
   handleSellChange( e ){
     const newValueUSD = e.target.value
     console.log(newValueUSD)
-    const convertedValueUSD = ( this.state.current_price / newValueUSD )
+    const convertedValueUSD2 = ((this.state.current_price * newValueUSD).toFixed(2))
+    const convertedValueUSD = convertedValueUSD2.toLocaleString('en')
+    console.log(convertedValueUSD)
     this.setState({convertedSellValue: convertedValueUSD})
   }
 
@@ -51,7 +53,7 @@ class App extends Component {
           <Trade handleTradeChange={this.handleTradeChange.bind(this)} convertedValue={this.state.convertedTradeValue} />
           </div>
           <div className="col-md-4">
-          <Sell />
+          <Sell handleSellChange={this.handleSellChange.bind(this)} convertedValueUSD={this.state.convertedSellValue}/>
           </div>
         <div className="col-md-4">
           <BitcoinPrice current_price={this.state.current_price}/>

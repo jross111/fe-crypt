@@ -19,7 +19,7 @@ function Sell(props){
                     className="form-control"
                     onChange={props.handleSellChange}
               />
-              <div id="btc_sell">You Will Receive <h4>${props.convertedValue} </h4></div>
+              <div id="btc_sell">You Will Receive <h4>${props.convertedValueUSD} </h4></div>
 
     
         </div>

@@ -14,7 +14,7 @@ function Trade(props){
           <div className="input-group">
         
              <input id="sell_btc" 
-                    type="number" 
+                    type="string" 
                     placeholder="USD" 
                     className="form-control"
                     onChange={props.handleTradeChange}
