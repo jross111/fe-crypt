@@ -2,7 +2,13 @@ import React from 'react'
 
 
 function BitcoinPrice(props) {
+  console.log("---------")
+  console.log("BitcoinPrice Props")
+  console.log("---------")
+  console.log(props)
+  console.log(props.current_price)
     return (
+
       <table className="table table-bordered">
    
       	<tbody>
@@ -16,7 +22,7 @@ function BitcoinPrice(props) {
       		</tr>
       		<tr>
       			<td>$10,000</td>
-      			<td> BTC { 10000 / props.current_price} </td>
+      			<td> BTC {10000 / props.current_price} </td>
       		</tr>
       		<tr>
       			<td>$1 </td>

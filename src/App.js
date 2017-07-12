@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar.js'
-import Balances from './components/Balances.js'
 import Trade from './components/Trade.js'
 import Sell from './components/Sell.js'
 import BitcoinGraph from './components/BitcoinGraph.js'
 import BitcoinPrice from './components/BitcoinPrice.js'
-import USDBalance from './components/USDBalance.js'
+
 
 
 
@@ -35,7 +34,7 @@ class App extends Component {
     const convertedValueUSD2 = ((this.state.current_price * newValueUSD).toFixed(2))
     const convertedValueUSD = convertedValueUSD2.toLocaleString('en')
     console.log(convertedValueUSD)
-    this.setState({convertedSellValue: convertedValueUSD})
+    this.setState({convertedSellValue: convertedValueUSD.toLocaleString('en')})
   }
 
   componentWillMount() {

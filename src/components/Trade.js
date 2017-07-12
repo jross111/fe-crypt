@@ -12,7 +12,7 @@ function Trade(props){
         <div className="col-md-3">
         <div className="btn-group" role="group" >
           <div className="input-group">
-        
+        <span className="input-group-addon">$</span>
              <input id="sell_btc" 
                     type="string" 
                     placeholder="USD" 
@@ -20,8 +20,8 @@ function Trade(props){
                     onChange={props.handleTradeChange}
 
               />
-              <div id="btc_buy">You Will Receive <h4>{props.convertedValue} Bitcoin</h4></div>
         </div>
+              <div id="btc_buy">You Will Receive: <h2>{props.convertedValue} BTC</h2></div>
         <input type="submit" value="BUY" className="btn btn-block btn-lg btn-success"/>
         </div>
         </div>
