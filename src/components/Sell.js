@@ -2,6 +2,7 @@ import React from 'react'
 
 
 function Sell(props){
+  console.log(props)
   return(
     <div className="container">
       <div className="row">
@@ -12,12 +13,17 @@ function Sell(props){
         <div className="btn-group" role="group" >
           <div className="input-group">
           
-            <input type="text" id="buy_btc" placeholder="BTC" className="form-control" aria-label="Amount"/>
-            <input type="text" id="sell_btc" placeholder="USD" className="form-control" aria-label="Amount"/>
-          <button type="button" className="btn  btn-primary">1/4</button>
-          <button type="button" className="btn  btn-primary">1/2</button>  <button type="button" className="btn  btn-danger">Max</button>
+               <input id="buy_btc" 
+                    type="number" 
+                    placeholder="Bitcoin" 
+                    className="form-control"
+                    onChange={props.handleSellChange}
+              />
+              <div id="btc_sell">You Will Receive <h4>${props.convertedValue} </h4></div>
+
+    
         </div>
-              <input type="submit" value="Sell" className="btn btn-block btn-lg btn-success"/>
+              <input type="submit" value="Sell" className="btn btn-block btn-lg btn-warning"/>
         </div>
         </div>
       </div>

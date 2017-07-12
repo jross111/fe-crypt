@@ -17,9 +17,24 @@ class App extends Component {
     super()
     this.state = {
       current_price: "",
-
+      convertedTradeValue: "",
+      convertedSellValue: ""
     }
   } 
+
+  handleTradeChange( e ){
+    const newValue = e.target.value
+    console.log(newValue)
+    const convertedValue =  ( newValue / this.state.current_price )
+    this.setState({convertedTradeValue: convertedValue})   
+  }
+
+  handleSellChange( e ){
+    const newValueUSD = e.target.value
+    console.log(newValueUSD)
+    const convertedValueUSD = ( this.state.current_price / newValueUSD )
+    this.setState({convertedSellValue: convertedValueUSD})
+  }
 
   componentWillMount() {
     fetch('https://blockchain.info/q/24hrprice')
@@ -33,7 +48,7 @@ class App extends Component {
 
         <div className="row">
           <div className="col-md-4">
-          <Trade />
+          <Trade handleTradeChange={this.handleTradeChange.bind(this)} convertedValue={this.state.convertedTradeValue} />
           </div>
           <div className="col-md-4">
           <Sell />
