@@ -20,7 +20,7 @@ class App extends Component {
       convertedTradeValue: "",
       convertedSellValue: "",
       usd_balance: 10000,
-      btc_balance: 2.5
+      btc_balance: 0
 
     }
   }
@@ -37,19 +37,20 @@ class App extends Component {
 
   handleSellChange( e ){
     const newValueUSD = e.target.value
-    const convertedValueUSD2 = ((this.state.current_price * newValueUSD).toFixed(2))
-    const convertedValueUSD = parseFloat(convertedValueUSD2, 10).toLocaleString(
-  undefined,  { minimumFractionDigits: 2 }
-);
+    const convertedValueUSD = parseFloat(((this.state.current_price * newValueUSD).toFixed(2)))
+
+;
     this.setState({convertedSellValue: convertedValueUSD})
   }
 
   handleBuyClick( e ){
     e.preventDefault();
-    const newBtcBalance = this.state.btc_balance + this.state.convertedTradeValue
+    const btcSell = this.state.convertedTradeValue
+    const newBtcBalance = this.state.btc_balance + btcSell
     const sellUSD = parseInt(document.getElementById('buy_btc').value)
     const newUSDBalance = this.state.usd_balance - sellUSD
     this.setState({btc_balance: newBtcBalance, usd_balance: newUSDBalance } )
+    alert(`Success! \n\n\nYou bought ${btcSell} Bitcoins for $${sellUSD}`)
   
    
 
@@ -58,12 +59,13 @@ class App extends Component {
 
   handleSellClick( e ) {
     e.preventDefault();
-    console.log("Sell")
-    console.log(this)
-    const newUSDBalance = this.state.usd_balance + this.state.convertedSellValue
-    console.log("~~~~")
+    const sellUSD = this.state.convertedSellValue
+    const newUSDBalance = this.state.usd_balance + sellUSD
     console.log(newUSDBalance)
-    this.setState({})
+    const sellBTC = parseInt(document.getElementById('sell_btc').value)
+    const newBTCBalance = this.state.btc_balance - sellBTC
+    this.setState({usd_balance: newUSDBalance, btc_balance: newBTCBalance})
+    alert(`Success! \n\n\nYou sold ${sellBTC} Bitcoins for $${sellUSD}`)
   }
 
 
