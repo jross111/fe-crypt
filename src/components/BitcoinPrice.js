@@ -2,34 +2,25 @@ import React from 'react'
 
 
 function BitcoinPrice(props) {
-  console.log("---------")
-  console.log("BitcoinPrice Props")
-  console.log("---------")
-  console.log(props)
-  console.log(props.current_price)
     return (
 
-      <table className="table table-bordered">
+      <div className="dropdown">
+       <h5 className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Current Price Conversions</h5>
    
-      	<tbody>
-      		<tr>
-      			<td> 1 BTC </td>
-      			<td> ${props.current_price}</td>
-      		</tr>
-      		<tr>
-      			<td> 0.25 BTC </td>
-      			<td> ${props.current_price * 0.25}</td>
-      		</tr>
-      		<tr>
-      			<td>$10,000</td>
-      			<td> BTC {10000 / props.current_price} </td>
-      		</tr>
-      		<tr>
-      			<td>$1 </td>
-      			<td> BTC { 1 / props.current_price}</td>
-      		</tr>
-      	</tbody>
-      </table>
+      	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      		
+      			<h4 className="dropdown-item">1 BTC is worth ${props.current_price}</h4>
+      	
+      		 <h6 className="dropdown-item">0.25 BTC = ${props.current_price * 0.25}</h6>
+      
+      			<h6 className="dropdown-item">$10,000 = BTC {10000 / props.current_price}</h6> 
+      	
+      		
+      			<h6 className="dropdown-item">$1 = BTC { 1 / props.current_price}</h6>
+      		
+      	</div>
+      </div>
 
 
     )

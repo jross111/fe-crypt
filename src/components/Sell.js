@@ -13,7 +13,7 @@ function Sell(props){
         <div className="btn-group" role="group" >
           <div className="input-group">
           <span className="input-group-addon">BTC</span>
-               <input id="buy_btc" 
+               <input id="sell_btc" 
                     type="number" 
                     placeholder="Bitcoin" 
                     className="form-control"
@@ -21,11 +21,11 @@ function Sell(props){
                     onChange={props.handleSellChange}
               />
               </div>
-              <div id="btc_sell">You Will Receive: <h2>${props.convertedValueUSD} </h2></div>
+              <div id="btc_sell">You Will Receive: <h2>{ "$" + props.convertedValueUSD} </h2></div>
 
     
         
-              <input type="submit" value="Sell" className="btn btn-block btn-lg btn-warning"/>
+              <input type="submit" onClick={props.handleSellClick} value="Sell" className="btn btn-block btn-lg btn-warning"/>
         </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react'
-import USDBalance from './USDBalance.js'
-import BTCBalance from './BTCBalance.js'
+
 
 
 
@@ -9,10 +8,13 @@ function NavBar(props) {
 
     <nav className="navbar bg-primary">
       <div className="container-fluid">
+       <div className="navbar-brand btn-sm btn-primary navbar-right">Log Out</div>
 
-        <div className="navbar-brand">< BTCBalance /></div>
+       	<div className="navbar-brand">Welcome leiaj! </div>
+
    
-        <div className="navbar-brand" ><USDBalance /></div>
+       
+     
       </div>
     </nav>
 

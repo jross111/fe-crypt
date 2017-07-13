@@ -13,16 +13,18 @@ function Trade(props){
         <div className="btn-group" role="group" >
           <div className="input-group">
         <span className="input-group-addon">$</span>
-             <input id="sell_btc" 
-                    type="string" 
+             <input id="buy_btc" 
+                    type="number" 
                     placeholder="USD" 
                     className="form-control"
                     onChange={props.handleTradeChange}
 
+                 
+
               />
         </div>
               <div id="btc_buy">You Will Receive: <h2>{props.convertedValue} BTC</h2></div>
-        <input type="submit" value="BUY" className="btn btn-block btn-lg btn-success"/>
+        <input  type="submit" onClick={props.handleBuyClick} value="BUY" className="btn btn-block btn-lg btn-success"/>
         </div>
         </div>
       </div>
